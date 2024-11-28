@@ -1,0 +1,95 @@
+body {
+  background-color: #f7ecde;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 48px;
+  letter-spacing: 2px;
+  position: relative;
+  /* background-color: #fec260; */
+}
+
+/* h1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 25px;
+  width: 23%;
+  transform: translateX(-50%);
+  background-color: #e7db35;
+} */
+
+h1::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  border: 1px dashed black;
+}
+
+h2 {
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  background: linear-gradient(90deg, #40a55b, #e7db35);
+  background-clip: text;
+  color: transparent;
+}
+
+label {
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.submit {
+  background-color: #d1512d !important;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.visit {
+  background-color: #8a9e23 !important;
+}
+
+.red {
+  color: #f15f5d;
+  font-size: 18px;
+}
+
+.yellow {
+  color: #febe2e;
+  font-size: 18px;
+}
+
+.green {
+  color: #4db748;
+  font-size: 18px;
+}
+
+.xmark {
+  cursor: pointer;
+}
+
+.arrow {
+  color: #bb4120;
+  font-size: 18px;
+}
+
+.lightbox-container .lightbox-item p {
+  font-family: "Bree Serif", serif;
+  font-size: 26px;
+}
+
+.lightbox-container .lightbox-item ul li {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 18px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container p-5">
+      <div
+        id="errorPopup"
+        class="lightbox-container z-2 d-none d-flex align-items-center justify-content-center bg-black bg-opacity-25 vh-100 position-absolute top-0 start-0 end-0"
+      >
+        <div class="lightbox-item bg-white w-50 p-4 rounded-2">
+          <div class="d-flex justify-content-between">
+            <div>
+              <i class="red fa-solid fa-circle"></i>
+              <i class="yellow fa-solid fa-circle"></i>
+              <i class="green fa-solid fa-circle"></i>
+            </div>
+            <div id="xMark" class="xmark">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <p class="my-4">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ul>
+            <li class="mb-4">
+              <i class="arrow fa-regular fa-circle-right pe-2"></i>Site name
+              must contain at least 3 characters
+            </li>
+            <li>
+              <i class="arrow fa-regular fa-circle-right pe-2"></i>Site URL must
+              be a valid one
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <h1 class="text-center my-5 fw-bold">Bookmarker<span></span></h1>
+        <h2 class="text-center my-3">
+          <i class="fa-solid fa-bookmark pe-2"></i>Bookmark your favorite
+          sites<i class="fa-solid fa-bookmark ps-2"></i>
+        </h2>
+        <div class="mb-3">
+          <label for="bookmarkName"
+            ><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name
+          </label>
+          <input
+            oninput="validateBookmarkName()"
+            type="text"
+            class="form-control border-0 border-bottom"
+            id="bookmarkName"
+            placeholder="Bookmark Name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="siteURL"
+            ><i class="fa-solid fa-link pe-2"></i> Site URL
+          </label>
+          <input
+            oninput="validateSiteURL()"
+            type="text"
+            class="form-control border-0 border-bottom"
+            id="siteURL"
+            placeholder="Site URL"
+          />
+        </div>
+        <div class="text-center">
+          <button
+            onclick="addBookmark()"
+            id="submitBtn"
+            class="submit btn text-white rounded-2 px-5 py-2 mb-5"
+          >
+            Submit
+          </button>
+        </div>
+        <div class="bg-white text-center">
+          <div class="row py-2 border-bottom border-1">
+            <div class="col-3 fw-bold">Index</div>
+            <div class="col-3 fw-bold">Website Name</div>
+            <div class="col-3 fw-bold">Visit</div>
+            <div class="col-3 fw-bold">Dlete</div>
+          </div>
+          <div id="bookmarksPreview"></div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
